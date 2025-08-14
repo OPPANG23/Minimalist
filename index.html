@@ -284,13 +284,20 @@
     .about__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
     .about__text { color: #333; font-size: clamp(14px, 2.6vw, 16px); }
     .about__aside { border-left: 1px solid #eee; padding-left: clamp(16px, 2vw, 24px); color: #555; }
+    .about__photo { width: 100%; height: clamp(260px, 40vw, 520px); object-fit: cover; background: #f6f6f6; border: 1px solid #eee; margin-bottom: 14px; }
 
     /* Services */
     .services { background: var(--color-dark); color: #fff; padding: clamp(56px, 10svh, 100px) 0; }
     .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 3vw, 28px); margin-top: 24px; }
-    .service-card { border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.02); padding: clamp(18px, 3vw, 28px); }
+    .service-card { border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.02); padding: clamp(18px, 3vw, 28px); overflow: hidden; border-radius: 8px; }
+    .service-thumb { width: calc(100% + 2*clamp(18px, 3vw, 28px)); height: clamp(120px, 18vw, 160px); object-fit: cover; display: block; margin: calc(-1 * clamp(18px, 3vw, 28px)) calc(-1 * clamp(18px, 3vw, 28px)) 12px; filter: grayscale(1) contrast(1.05); border-bottom: 1px solid rgba(255,255,255,0.12); }
     .service-card h3 { margin: 0 0 8px 0; font-family: "Playfair Display", serif; font-weight: 600; letter-spacing: 0.02em; }
     .service-card p { margin: 0; color: #d2d2d2; font-size: 14px; }
+
+    /* Gallery */
+    .gallery { background: #fff; color: #111; padding: clamp(56px, 10svh, 100px) 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(8px, 1.5vw, 14px); margin-top: 18px; }
+    .gallery-item { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #f4f4f4; border: 1px solid #eee; }
 
     /* Contact */
     .contact { background: #fff; color: #111; padding: clamp(56px, 10svh, 100px) 0; }
@@ -314,6 +321,8 @@
       overflow: hidden; clip: rect(0, 0, 0, 0);
       white-space: nowrap; border: 0;
     }
+    .img-mono { filter: grayscale(1) contrast(1.05); }
+    section[id] { scroll-margin-top: 80px; }
 
     /* Responsiveness tweaks */
     @media (max-width: 720px) {
@@ -321,6 +330,7 @@
       .final__grid { grid-template-columns: 1fr auto; }
       .about__grid { grid-template-columns: 1fr; }
       .service-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .site-nav__links { gap: 16px; }
     }
@@ -333,6 +343,7 @@
       <ul class="site-nav__links">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -399,6 +410,7 @@
           <p class="about__text">I craft clean, timeless visuals with an emphasis on restraint and balance. Inspired by black-and-white film and tactile print artifacts, my work focuses on structure, typography, and atmosphere.</p>
         </div>
         <aside class="about__aside">
+          <img class="about__photo img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200&auto=format&fit=crop" alt="Studio monochrome portrait" />
           <p><strong>Focus</strong><br/>Art direction, lookbooks, and brand systems for fashion and culture.</p>
           <p><strong>Based</strong><br/>Remote / Worldwide</p>
         </aside>
@@ -414,17 +426,36 @@
         </div>
         <div class="service-grid">
           <div class="service-card">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200&auto=format&fit=crop" alt="Editorial design thumbnail" />
             <h3>Editorial Design</h3>
             <p>Print-inspired layouts, rhythm, and pacing across digital surfaces.</p>
           </div>
           <div class="service-card">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200&auto=format&fit=crop" alt="Lookbook styling thumbnail" />
             <h3>Lookbook Styling</h3>
             <p>Campaign direction and sequencing to highlight texture and form.</p>
           </div>
           <div class="service-card">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200&auto=format&fit=crop" alt="Minimal branding thumbnail" />
             <h3>Minimal Branding</h3>
             <p>Quiet identities, typographic systems, and black-and-white palettes.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-kicker">Gallery</div>
+        <h2 id="gallery-title" class="section-title">Monochrome studies</h2>
+        <div class="gallery-grid">
+          <img class="gallery-item img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=800&auto=format&fit=crop" alt="Monochrome study 1" />
+          <img class="gallery-item img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=801&auto=format&fit=crop" alt="Monochrome study 2" />
+          <img class="gallery-item img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=802&auto=format&fit=crop" alt="Monochrome study 3" />
+          <img class="gallery-item img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=803&auto=format&fit=crop" alt="Monochrome study 4" />
+          <img class="gallery-item img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=804&auto=format&fit=crop" alt="Monochrome study 5" />
+          <img class="gallery-item img-mono" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=805&auto=format&fit=crop" alt="Monochrome study 6" />
         </div>
       </div>
     </section>
@@ -451,7 +482,7 @@
     <div class="container site-footer__inner">
       <div>© 2023 Emerson Studio</div>
       <div style="letter-spacing:.12em; text-transform:uppercase; font-size:12px;">
-        <a href="#about">About</a> &nbsp;·&nbsp; <a href="#services">Services</a> &nbsp;·&nbsp; <a href="#contact">Contact</a>
+        <a href="#about">About</a> &nbsp;·&nbsp; <a href="#services">Services</a> &nbsp;·&nbsp; <a href="#gallery">Gallery</a> &nbsp;·&nbsp; <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
