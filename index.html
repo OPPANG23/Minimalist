@@ -1,3 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A calming, minimal portfolio of nature videos" />
+    <title>Nature Videos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="Nature Videos home">Leaf & Light</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section reveal" aria-label="Intro">
+        <div class="container hero-inner">
+          <h1>Calm moments in nature</h1>
+          <p>Minimal, slow, and soothing visuals from forests, water, and sky.</p>
+          <a class="button" href="#gallery">Explore gallery</a>
+        </div>
+        <svg class="hero-leaf" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M15 90C15 50 50 15 90 15c0 40-35 75-75 75z" fill="currentColor" opacity=".08" />
+        </svg>
+      </section>
+
+      <section id="gallery" class="section section-divider-top reveal" aria-label="Video gallery">
+        <div class="container">
+          <h2>Gallery</h2>
+          <div class="grid videos-grid">
+            <figure class="card reveal">
+              <div class="media">
+                <video class="nature-video" playsinline muted loop preload="none" poster="assets/posters/forest.svg" data-src="assets/videos/forest.mp4" aria-label="Forest canopy swaying"></video>
+              </div>
+              <figcaption>Forest canopy</figcaption>
+            </figure>
+            <figure class="card reveal">
+              <div class="media">
+                <video class="nature-video" playsinline muted loop preload="none" poster="assets/posters/waterfall.svg" data-src="assets/videos/waterfall.mp4" aria-label="Waterfall cascade"></video>
+              </div>
+              <figcaption>Waterfall</figcaption>
+            </figure>
+            <figure class="card reveal">
+              <div class="media">
+                <video class="nature-video" playsinline muted loop preload="none" poster="assets/posters/meadow.svg" data-src="assets/videos/meadow.mp4" aria-label="Meadow in the wind"></video>
+              </div>
+              <figcaption>Meadow</figcaption>
+            </figure>
+            <figure class="card reveal">
+              <div class="media">
+                <video class="nature-video" playsinline muted loop preload="none" poster="assets/posters/shore.svg" data-src="assets/videos/shore.mp4" aria-label="Shoreline waves"></video>
+              </div>
+              <figcaption>Shoreline</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-divider reveal" aria-label="About">
+        <div class="container narrow">
+          <h2>About</h2>
+          <p>
+            This collection celebrates gentle rhythms in the natural world. The design is intentionally minimal to let the scenes breathe—quiet, slow, and restorative.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-divider reveal" aria-label="Contact">
+        <div class="container narrow">
+          <h2>Contact</h2>
+          <p>For collaborations or licensing, reach me at <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Leaf & Light</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
 <!doctype html>
 <html lang="en">
 <head>

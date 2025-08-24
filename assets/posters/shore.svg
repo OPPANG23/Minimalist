@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Shore placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6f3ea"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <g fill="#2f7a41" opacity="0.15">
+    <path d="M0,720 C300,640 500,760 800,720 C1100,680 1300,740 1600,720 L1600,900 L0,900 Z"/>
+  </g>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="56" fill="#2f7a41" opacity="0.6">Shoreline</text>
+</svg>
