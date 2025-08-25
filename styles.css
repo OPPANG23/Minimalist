@@ -1,3 +1,110 @@
+:root {
+  --bg: #0f0f0f;
+  --fg: #ffffff;
+  --muted: #b3b3b3;
+  --card: #1a1a1a;
+  --gutter: 24px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.page { display: block; }
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.section { padding: 40px 0 28px; }
+
+.eyebrow {
+  margin: 0 0 18px;
+  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.grid--products {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+  background: #141414;
+  border: 1px solid #222;
+}
+
+.product-card__media { aspect-ratio: 1 / 1; background: var(--card); display: grid; place-items: center; }
+.product-card__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.section--about .headline {
+  margin: 8px 0 16px;
+  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 42px;
+  line-height: 0.96;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.grid--about-media {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-media { width: 100%; height: 260px; object-fit: cover; background: var(--card); border: 1px solid #222; }
+
+.grid--lookbook { grid-template-columns: repeat(2, 1fr); }
+.lookbook-media { width: 100%; height: 320px; object-fit: cover; background: var(--card); border: 1px solid #222; }
+
+.footer { padding: 28px 0 18px; }
+.footer__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.footer__links { display: grid; grid-auto-flow: column; gap: 18px; }
+.footer__link { color: var(--fg); text-decoration: none; font-size: 12px; letter-spacing: 0.5px; }
+.footer__link:hover { text-decoration: underline; }
+.footer__contact { display: grid; gap: 6px; text-align: right; }
+
+.footer__brand { margin-top: 16px; }
+.brand-wordmark {
+  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(80px, 12vw, 160px);
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+  .grid--products { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .grid--products { grid-template-columns: repeat(2, 1fr); }
+  .grid--about-media { grid-template-columns: 1fr; }
+  .grid--lookbook { grid-template-columns: 1fr; }
+  .footer__top { flex-direction: column; align-items: stretch; }
+  .footer__contact { text-align: left; }
+}
+
 /* Design tokens */
 :root {
   --bg: #222222;
