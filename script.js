@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('site-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const pills = Array.from(document.querySelectorAll('.pill-nav .pill'));
   const sections = pills.map(p => document.querySelector(p.dataset.target));
 
