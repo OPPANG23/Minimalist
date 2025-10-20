@@ -1,136 +1,73 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JOVYNN</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfG3j6S4l6r9ZfWZC1r9bI7c8kCPn0P2vR4q3QY0Qk5a7HB+YFfMWN2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="app">
-    <header class="profile card">
-      <div class="avatar-wrap">
-        <img class="avatar" src="https://images.unsplash.com/photo-1516570161787-2fd917215a3d?q=80&w=1000&auto=format&fit=crop" alt="Artist portrait">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project CHAOS — Poster (HTML/CSS)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="poster" role="img" aria-label="Promotional poster: Project CHAOS Batch XIV with 20-member grid and info column">
+      <!-- Giant background words -->
+      <div class="bg-words" aria-hidden="true">
+        <span class="bg-word project">PROJECT</span>
+        <span class="bg-word chaos">CHAOS</span>
       </div>
-      <h1 class="artist-name">JOVYNN</h1>
-      <div class="socials">
-        <a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a aria-label="TikTok" href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a aria-label="YouTube" href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a aria-label="SoundCloud" href="#"><i class="fa-brands fa-soundcloud"></i></a>
-        <a aria-label="Spotify" href="#"><i class="fa-brands fa-spotify"></i></a>
+
+      <!-- Center title overlay -->
+      <div class="title" aria-hidden="true">
+        <span class="title-script">Batch</span>
+        <span class="title-roman">XIV</span>
       </div>
-      <nav class="pill-nav" role="tablist">
-        <button class="pill is-active" data-target="#upcoming">UPCOMING SHOWS</button>
-        <button class="pill" data-target="#livesets">LIVE SETS</button>
-        <button class="pill" data-target="#releases">RELEASES</button>
-      </nav>
-    </header>
 
-    <main class="content">
-      <section id="upcoming" class="section card" aria-labelledby="upcoming-title">
-        <div class="section-head">
-          <h2 id="upcoming-title">UPCOMING SHOWS</h2>
-        </div>
+      <!-- Main content grid: 5 columns of members + 1 info column -->
+      <section class="members-grid">
+        
+        <!-- 20 member cards -->
+        <article class="card"><figure><img src="https://picsum.photos/seed/sam/600/800" alt="Sam"/><figcaption><span class="name">SAM</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/deanver/600/800" alt="Deanver"/><figcaption><span class="name">DEANVER</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/tags/600/800" alt="Tags"/><figcaption><span class="name">TAGS</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/mae/600/800" alt="Mae"/><figcaption><span class="name">MAE</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/jhigy/600/800" alt="Jhigy"/><figcaption><span class="name">JHIGY</span></figcaption></figure></article>
 
-        <article class="show-card">
-          <div class="show-date">
-            <div class="month">APR</div>
-            <div class="day">30</div>
-            <div class="label">2025</div>
-          </div>
-          <div class="show-body">
-            <h3 class="show-title">Cherry Bomb @ Over &amp; Above</h3>
-            <p class="show-meta">Kuala Lumpur</p>
-            <div class="show-actions">
-              <a href="#" class="chip">Tickets</a>
-            </div>
-          </div>
-          <button class="icon-btn" aria-label="More options">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </button>
-        </article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/ashley/600/800" alt="Ashley"/><figcaption><span class="name">ASHLEY</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/jez/600/800" alt="Jez"/><figcaption><span class="name">JEZ</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/ronan/600/800" alt="Ronan"/><figcaption><span class="name">RONAN</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/april/600/800" alt="April"/><figcaption><span class="name">APRIL</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/judy/600/800" alt="Judy"/><figcaption><span class="name">JUDY</span></figcaption></figure></article>
+
+        <article class="card"><figure><img src="https://picsum.photos/seed/ej/600/800" alt="EJ"/><figcaption><span class="name">EJ</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/rain/600/800" alt="Rain"/><figcaption><span class="name">RAIN</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/ash/600/800" alt="Ash"/><figcaption><span class="name">ASH</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/dave/600/800" alt="Dave"/><figcaption><span class="name">DAVE</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/jim/600/800" alt="Jim"/><figcaption><span class="name">JIM</span></figcaption></figure></article>
+
+        <article class="card"><figure><img src="https://picsum.photos/seed/ara/600/800" alt="Ara"/><figcaption><span class="name">ARA</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/gelo/600/800" alt="Gelo"/><figcaption><span class="name">GELO</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/jp/600/800" alt="JP"/><figcaption><span class="name">JP</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/roxy/600/800" alt="Roxy"/><figcaption><span class="name">ROXY</span></figcaption></figure></article>
+        <article class="card"><figure><img src="https://picsum.photos/seed/kai/600/800" alt="Kai"/><figcaption><span class="name">KAI</span></figcaption></figure></article>
+
+        <!-- Info column that spans rows 1-4 -->
+        <aside class="origin">
+          <h3>Origins of Project Chaos</h3>
+          <p>
+            Project CHAOS began as a creative movement to fuse style, motion, and
+            storytelling. Over time it evolved into a community of performers who
+            challenge norms and celebrate individuality through color, rhythm, and
+            collaboration.
+          </p>
+          <p>
+            This batch showcases new faces and fearless energy—captured in a bold
+            palette and clean grid, with oversized typography echoing confidence.
+          </p>
+          <div class="walker" aria-hidden="true"></div>
+          <div class="barcode" aria-hidden="true" title="000123456789"></div>
+        </aside>
       </section>
-
-      <section id="livesets" class="section card" aria-labelledby="livesets-title" hidden>
-        <div class="section-head">
-          <h2 id="livesets-title">LIVE SETS</h2>
-        </div>
-
-        <div class="media-grid">
-          <article class="media-card">
-            <div class="media-thumb">
-              <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop" alt="Live set 1">
-            </div>
-            <div class="media-info">
-              <h3>JOVYNN @ Vantopia, 2024 (Highlights)</h3>
-              <p class="muted">10:23</p>
-            </div>
-          </article>
-
-          <article class="media-card">
-            <div class="media-thumb">
-              <img src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81e?q=80&w=1200&auto=format&fit=crop" alt="Live set 2">
-            </div>
-            <div class="media-info">
-              <h3>Stormrave, KL – Night 2</h3>
-              <p class="muted">12:47</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="releases" class="section card" aria-labelledby="releases-title" hidden>
-        <div class="section-head">
-          <h2 id="releases-title">RELEASES</h2>
-        </div>
-
-        <div class="tracklist">
-          <article class="track">
-            <img class="cover" src="https://images.unsplash.com/photo-1520975867597-0f2aff50e38c?q=80&w=400&auto=format&fit=crop" alt="Rack It Up cover">
-            <div class="track-info">
-              <h3>Rack It Up</h3>
-              <p class="muted">JOVYNN</p>
-            </div>
-            <button class="circle-btn" aria-label="Play"><i class="fa-solid fa-play"></i></button>
-          </article>
-
-          <article class="track">
-            <img class="cover" src="https://images.unsplash.com/photo-1532634886-26909d0d4b6a?q=80&w=400&auto=format&fit=crop" alt="Push Up - Remix cover">
-            <div class="track-info">
-              <h3>Push Up – Remix</h3>
-              <p class="muted">JOVYNN</p>
-            </div>
-            <button class="circle-btn" aria-label="Play"><i class="fa-solid fa-play"></i></button>
-          </article>
-
-          <article class="track">
-            <img class="cover" src="https://images.unsplash.com/photo-1526481280698-8fcc13fd1ea5?q=80&w=400&auto=format&fit=crop" alt="The Sound of Bulgarian Folk cover">
-            <div class="track-info">
-              <h3>The Sound of Bulgarian Folk</h3>
-              <p class="muted">Stoian Geevlin, JOVYNN, CREW RAVE</p>
-            </div>
-            <button class="circle-btn" aria-label="Play"><i class="fa-solid fa-play"></i></button>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <span class="muted">JOVYNN Privacy Policy</span>
-        <span class="divider"></span>
-        <span class="brand">KOMI</span>
-        <span class="divider"></span>
-        <a class="muted" href="#">Privacy Preferences</a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    </div>
+  </body>
 </html>
