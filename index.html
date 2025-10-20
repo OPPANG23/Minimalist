@@ -1,73 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project CHAOS — Poster (HTML/CSS)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Project Chaos — Batch XIV (Poster)</title>
+
+    <!-- Fonts (fall back to system if unavailable) -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="poster" role="img" aria-label="Promotional poster: Project CHAOS Batch XIV with 20-member grid and info column">
-      <!-- Giant background words -->
-      <div class="bg-words" aria-hidden="true">
-        <span class="bg-word project">PROJECT</span>
-        <span class="bg-word chaos">CHAOS</span>
+    <div class="poster">
+      <!-- Giant background title -->
+      <div class="title-bg" aria-hidden="true">
+        <span class="left">PROJECT</span>
+        <span class="right">CHAOS</span>
       </div>
 
-      <!-- Center title overlay -->
-      <div class="title" aria-hidden="true">
-        <span class="title-script">Batch</span>
-        <span class="title-roman">XIV</span>
+      <!-- Script overlay for Batch XIV -->
+      <div class="batch-overlay" aria-hidden="true">
+        <span class="script">Batch</span>
+        <span class="roman">XIV</span>
       </div>
 
-      <!-- Main content grid: 5 columns of members + 1 info column -->
-      <section class="members-grid">
-        
-        <!-- 20 member cards -->
-        <article class="card"><figure><img src="https://picsum.photos/seed/sam/600/800" alt="Sam"/><figcaption><span class="name">SAM</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/deanver/600/800" alt="Deanver"/><figcaption><span class="name">DEANVER</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/tags/600/800" alt="Tags"/><figcaption><span class="name">TAGS</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/mae/600/800" alt="Mae"/><figcaption><span class="name">MAE</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/jhigy/600/800" alt="Jhigy"/><figcaption><span class="name">JHIGY</span></figcaption></figure></article>
+      <!-- Main grid: 4 columns of members + 1 column for info panel -->
+      <main class="grid">
+        <!-- 16 member cards (placeholders). Replace img src with real photos. -->
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/sam/600/700" alt="Sam" />
+          <figcaption>SAM</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/deanver/600/700" alt="Deanver" />
+          <figcaption>DEANVER</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/tags/600/700" alt="Tags" />
+          <figcaption>TAGS</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/mae/600/700" alt="Mae" />
+          <figcaption>MAE</figcaption>
+        </figure>
 
-        <article class="card"><figure><img src="https://picsum.photos/seed/ashley/600/800" alt="Ashley"/><figcaption><span class="name">ASHLEY</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/jez/600/800" alt="Jez"/><figcaption><span class="name">JEZ</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/ronan/600/800" alt="Ronan"/><figcaption><span class="name">RONAN</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/april/600/800" alt="April"/><figcaption><span class="name">APRIL</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/judy/600/800" alt="Judy"/><figcaption><span class="name">JUDY</span></figcaption></figure></article>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/jhigz/600/700" alt="Jhigz" />
+          <figcaption>JHIGZ</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/ashley/600/700" alt="Ashley" />
+          <figcaption>ASHLEY</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/jez/600/700" alt="Jez" />
+          <figcaption>JEZ</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/ronan/600/700" alt="Ronan" />
+          <figcaption>RONAN</figcaption>
+        </figure>
 
-        <article class="card"><figure><img src="https://picsum.photos/seed/ej/600/800" alt="EJ"/><figcaption><span class="name">EJ</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/rain/600/800" alt="Rain"/><figcaption><span class="name">RAIN</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/ash/600/800" alt="Ash"/><figcaption><span class="name">ASH</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/dave/600/800" alt="Dave"/><figcaption><span class="name">DAVE</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/jim/600/800" alt="Jim"/><figcaption><span class="name">JIM</span></figcaption></figure></article>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/april/600/700" alt="April" />
+          <figcaption>APRIL</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/judy/600/700" alt="Judy" />
+          <figcaption>JUDY</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/ej/600/700" alt="EJ" />
+          <figcaption>EJ</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/rain/600/700" alt="Rain" />
+          <figcaption>RAIN</figcaption>
+        </figure>
 
-        <article class="card"><figure><img src="https://picsum.photos/seed/ara/600/800" alt="Ara"/><figcaption><span class="name">ARA</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/gelo/600/800" alt="Gelo"/><figcaption><span class="name">GELO</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/jp/600/800" alt="JP"/><figcaption><span class="name">JP</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/roxy/600/800" alt="Roxy"/><figcaption><span class="name">ROXY</span></figcaption></figure></article>
-        <article class="card"><figure><img src="https://picsum.photos/seed/kai/600/800" alt="Kai"/><figcaption><span class="name">KAI</span></figcaption></figure></article>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/ash/600/700" alt="Ash" />
+          <figcaption>ASH</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/dave/600/700" alt="Dave" />
+          <figcaption>DAVE</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/jim/600/700" alt="Jim" />
+          <figcaption>JIM</figcaption>
+        </figure>
+        <figure class="member-card">
+          <img src="https://picsum.photos/seed/ara/600/700" alt="Ara" />
+          <figcaption>ARA</figcaption>
+        </figure>
 
-        <!-- Info column that spans rows 1-4 -->
-        <aside class="origin">
-          <h3>Origins of Project Chaos</h3>
+        <!-- ASIDE occupies the 5th column across 4 rows -->
+        <aside class="info-panel">
+          <h2>ORIGINS OF PROJECT CHAOS</h2>
           <p>
-            Project CHAOS began as a creative movement to fuse style, motion, and
-            storytelling. Over time it evolved into a community of performers who
-            challenge norms and celebrate individuality through color, rhythm, and
-            collaboration.
+            Inspired by vibrant street culture and unfiltered expression, Project
+            Chaos celebrates individuality within a collective. This batch
+            forged their identity through movement, color, and creative risk — a
+            reminder that the loudest voices often speak without words.
           </p>
           <p>
-            This batch showcases new faces and fearless energy—captured in a bold
-            palette and clean grid, with oversized typography echoing confidence.
+            Every portrait captures a unique energy. Together, they assemble a
+            mosaic of style — defiant, playful, and unforgettable.
           </p>
-          <div class="walker" aria-hidden="true"></div>
-          <div class="barcode" aria-hidden="true" title="000123456789"></div>
+
+          <div class="barcode" aria-hidden="true"></div>
+          <div class="stick-figure" aria-hidden="true"></div>
         </aside>
-      </section>
+      </main>
     </div>
   </body>
 </html>
